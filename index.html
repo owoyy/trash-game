@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>trash game</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body class="min-h-screen" style="background: var(--bg-hero);">
+
+  <!-- Navigation -->
+  <nav class="border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="text-2xl font-bold text-red-500">
+            <div class="relative flex overflow-visible">
+              <span class="word-left">똥</span>
+              <span class="word-right">겜</span>
+            </div>
+          </a>
+          <div class="hidden md:flex items-center gap-6">
+            <a href="mon.html">공성전</a>
+            <a href="teo.html">강림원정대</a>
+            <a href="eye.html">레이드</a>
+
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button id="darkModeToggle" class="p-2 rounded-full dark-mode-toggle" aria-label="다크 모드 토글">
+            <svg id="moonIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Content Grid -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- 공성전 - 요일별 -->
+      <div class="card">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-bold">공성전</h2>
+        </div>
+
+        <div class="space-y-4">
+          <a href="mon.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/monday.jpg" alt="월요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">월요일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="tue.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/tuesday.jpg" alt="화요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">화요일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="wed.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/wednesday.jpg" alt="수요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">수요일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="thu.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/thursday.jpg" alt="목요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">목요일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="fri.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/friday.jpg" alt="금요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">금요일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="sat.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/saturday.jpg" alt="토요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">토요일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="sun.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../advent/sunday.jpg" alt="일요일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">일요일</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 강림원정대 -->
+      <div class="card">
+        <h2 class="text-xl font-bold mb-6">강림원정대</h2>
+
+        <div class="space-y-3">
+          <a href="teo.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/teo.jpg" alt="태오" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">태오</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="kyle.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/kyle.jpg" alt="카일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">카일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="yeon.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/yeon.jpg" alt="연희" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">연희</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="karma.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/karm.jpg" alt="카르마" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">카르마</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="des.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/destroy.jpg" alt="파괴신" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">파괴신</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- 빈 카드 -->
+      <div class="card">
+        <h2 class="text-xl font-bold mb-6">레이드</h2>
+        <a href="eye.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../raid/eye.jpg" alt="파멸의눈동자" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">파멸의눈동자</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="cow.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../raid/cow.jpg" alt="우마왕" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">우마왕</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="snake.html" class="sidebar-item">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../raid/hungry.jpg" alt="강철의포식자" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">강철의포식자</p>
+              </div>
+            </div>
+          </a>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    // 다크모드 토글 기능
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const moonIcon = document.getElementById('moonIcon');
+    const sunIcon = document.getElementById('sunIcon');
+    const html = document.documentElement;
+
+    // 페이지 로드 시 저장된 테마 적용
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      moonIcon.classList.add('hidden');
+      sunIcon.classList.remove('hidden');
+    }
+
+    // 다크모드 토글 이벤트
+    darkModeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+
+      if (currentTheme === 'dark') {
+        // 라이트 모드로 전환
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+      } else {
+        // 다크 모드로 전환
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>

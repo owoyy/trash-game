@@ -1,0 +1,318 @@
+/* Custom Styles for Gong Page */
+
+/* Dark Mode Variables */
+:root {
+  --bg-primary: white;
+  --bg-secondary: white;
+  --bg-sidebar: #f9fafb;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-tertiary: #6b7280;
+  --border-color: #e5e7eb;
+  --border-hover: #d1d5db;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+[data-theme="dark"] {
+  --bg-primary: #1f2937;
+  --bg-secondary: #1f2937;
+  --bg-sidebar: #111827;
+  --text-primary: #f9fafb;
+  --text-secondary: #d1d5db;
+  --text-tertiary: #9ca3af;
+  --border-color: #374151;
+  --border-hover: #4b5563;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Apply theme colors */
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav {
+  background-color: var(--bg-secondary);
+  border-bottom-color: var(--border-color);
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+nav a {
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: var(--text-primary);
+}
+
+.dark-mode-toggle {
+  color: var(--text-primary);
+  transition: color 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+  background-color: var(--bg-sidebar);
+}
+
+/* Sidebar Styles */
+.sidebar {
+  width: 280px;
+  background-color: var(--bg-sidebar);
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.sidebar-card {
+  padding: 1.5rem;
+}
+
+.sidebar-card h2 {
+  color: var(--text-primary);
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+}
+
+.sidebar-item:hover {
+  background-color: var(--bg-primary);
+}
+
+.sidebar-item p {
+  color: var(--text-primary);
+}
+
+.sidebar-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  border: 1px solid var(--border-color);
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  overflow-y: auto;
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease;
+}
+
+/* Image Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.image-card {
+  background-color: var(--bg-secondary);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: transform 0.2s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  aspect-ratio: 16 / 9;
+}
+
+.image-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2);
+}
+
+.image-card img {
+  transition: transform 0.3s ease;
+}
+
+.image-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    left: -280px;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+    z-index: 40;
+    transition: left 0.3s ease, background-color 0.3s ease;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: var(--bg-sidebar);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: var(--border-hover);
+}
+
+
+/* 현재 선택된 메뉴 하이라이트 */
+.sidebar-item.active {
+  background-color: var(--border-color); /* 배경색을 약간 어둡게 */
+  border-left: 4px solid #ef4444; /* 왼쪽에 빨간 줄로 강조 */
+  pointer-events: none; /* 이미 해당 페이지이므로 클릭 방지 */
+}
+
+/* 링크 기본 스타일 제거 (글자색 변화 방지) */
+a.sidebar-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.team-layout {
+    display: flex;
+    align-items: flex-end; 
+    gap: 10px; /* 박스 사이 간격 */
+}
+
+/* 공통 박스 스타일 */
+/* 컨테이너: 박스들을 가로로 정렬하고 바닥(flex-end)에 맞춤 */
+.team-layout {
+    display: flex;
+    align-items: flex-end; 
+    gap: 8px;
+    padding: 50px;
+}
+
+/* 기본 박스 (하단에 위치할 큰 박스) */
+.main-container {
+    display: flex;
+    flex-direction: column; /* 열들을 위에서 아래로 쌓음 */
+    gap: 12px; /* 열과 열 사이 간격 */
+}
+
+/* 각 열 설정 */
+.row {
+    display: flex;
+    justify-content: flex-start; /* 왼쪽부터 배치 */
+    align-items: flex-end;      /* 바닥 기준 정렬 */
+    gap: 8px;                    /* 박스 사이 간격 */
+    flex-wrap: wrap;             /* 화면 좁으면 자동 줄바꿈 */
+}
+
+/* 기본 박스 스타일 */
+.slot {
+    width: 50px;
+    height: 50px;
+    
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #333;
+    display: flex;
+}
+
+/* 이미지 설정 */
+.slot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.round{
+    color: white;
+    font-size: 10px;
+}
+
+.divider {
+    width: 20px;       /* 구분선이 차지할 가로 너비 */
+    height: 70px;      /* 박스 높이와 맞춤 */
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 실제 사선 모양 */
+.divider::before {
+    content: "";
+    width: 2px;            /* 선의 두께 */
+    height: 100%;          /* 선의 세로 길이 */
+    background-color: #333; /* 선의 색상 */
+    transform: rotate(20deg); /* 선을 20도 기울임 (이미지의 사선 느낌) */
+}
+
+
+.bin{
+    height: 20px;
+}
+
+
+.word-left, .word-right {
+    display: inline-block !important;
+    transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+a:hover .word-left {
+    transform: translateX(-40px) rotate(-10deg) !important;
+}
+
+a:hover .word-right {
+    transform: translateX(40px) rotate(10deg) !important;
+}
+
+
+/* Dark Mode Toggle Button */
+.dark-mode-toggle {
+  transition: background-color 0.2s ease;
+}
+
+[data-theme="dark"] .dark-mode-toggle {
+  background-color: rgba(251, 207, 232, 0.1);
+}
+
+.dark-mode-toggle:hover {
+  background-color: #f3f4f6;
+}
+
+[data-theme="dark"] .dark-mode-toggle:hover {
+  background-color: rgba(251, 207, 232, 0.2);
+}

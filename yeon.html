@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>강림원정대 - 공성 강림</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/gang.css">
+</head>
+
+<body class="min-h-screen">
+
+  <!-- Navigation -->
+  <nav class="border-b sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-16">
+        <div class="flex items-center gap-8">
+          <a href="index.html" class="text-2xl font-bold text-red-500">
+            <div class="relative flex overflow-visible">
+              <span class="word-left">똥</span>
+              <span class="word-right">겜</span>
+            </div>
+          </a>
+          <div class="hidden md:flex items-center gap-6">
+            <a href="mon.html">공성전</a>
+            <a href="teo.html">강림원정대</a>
+            <a href="eye.html">레이드</a>
+
+          </div>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <button id="darkModeToggle" class="p-2 rounded-full dark-mode-toggle" aria-label="다크 모드 토글">
+            <svg id="moonIcon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+            <svg id="sunIcon" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content with Sidebar -->
+  <div class="flex h-[calc(100vh-4rem)]">
+
+    <!-- Left Sidebar - 공성전 카드 -->
+    <aside class="sidebar">
+      <div class="sidebar-card">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-xl font-bold">강림원정대</h2>
+        </div>
+
+        <div class="space-y-4">
+          <a href="teo.html" class="sidebar-item ">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/teo.jpg" alt="태오" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">태오</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="kyle.html" class="sidebar-item ">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/kyle.jpg" alt="카일" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">카일</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="yeon.html" class="sidebar-item active">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/yeon.jpg" alt="연희" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">연희</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="karma.html" class="sidebar-item ">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/karm.jpg" alt="카르마" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">카르마</p>
+              </div>
+            </div>
+          </a>
+
+          <a href="des.html" class="sidebar-item ">
+            <div class="flex items-center gap-3 flex-1">
+              <img src="../siege/destroy.jpg" alt="파괴신" class="sidebar-avatar" />
+              <div class="flex-1 min-w-0">
+                <p class="font-medium truncate">파괴신</p>
+              </div>
+            </div>
+          </a>
+
+
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content Area - 중앙 이미지 5개 -->
+    <main class="main-content p-6">
+      <div class="max-w-5xl mx-auto space-y-4">
+        <div class="strategy-card bg-[#2d2d2d] rounded-lg overflow-hidden border border-gray-700 shadow-lg">
+
+          <div class="flex items-center justify-between p-4 gap-4">
+            <div class="w-32 flex-shrink-0">
+              <span class="text-orange-400 font-bold text-lg">오공12턴</span>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center gap-2 overflow-x-auto">
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/wukong/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/mila/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/yeon/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div class="divider"></div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/banesa/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/rina/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+            </div>
+            <div class="bin"></div>
+            <div class="bin"></div>
+            <div class="flex flex-1 items-center justify-center gap-2 overflow-x-auto">
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/biskuit/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/orlri/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/daisy/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div class="divider"></div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/miho/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/jury/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+            </div>
+
+            <div class="w-32 flex justify-end">
+              <button onclick="toggleDetails(this)"
+                class="bg-[#4a4a4a] hover:bg-gray-600 text-white text-sm py-2 px-4 rounded border border-gray-500 transition">
+                더보기
+              </button>
+            </div>
+          </div>
+
+          <div class="details hidden border-t border-gray-700 bg-[#1e3a52] p-6 transition-all">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+              <div class="main-container">
+
+
+
+
+                <div class="row">
+                  <div class="slot"><img src="char2/wukong/2.jpg" alt="오공2스"></div>
+                  <div class="slot"><img src="char2/rina/2.jpg" alt="리나2스"></div>
+                  <div class="slot"><img src="char1/banesa/1.jpg" alt="바네사1스"></div>
+                  <div class="slot"><img src="char2/wukong/1-1.jpg" alt="오공1스"></div>
+                </div>
+
+                <div class="row">
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                </div>
+
+                <div class="row">
+                  <div class="slot"><img src="char1/biskuit/1.jpg" alt="비스킷1스"></div>
+                  <div class="slot"><img src="char2/miho/1.jpg" alt="미호1스"></div>
+                  <div class="slot"><img src="char2/orlri/1.jpg" alt="오를리1스"></div>
+                  <div class="slot"><img src="char1/daisy/2.jpg" alt="데이지2스"></div>
+                  <div class="slot"><img src="char2/miho/2.jpg" alt="미호2스"></div>
+                  <div class="slot"><img src="char2/jury/2.jpg" alt="쥬리2스"></div>
+                  <div class="slot"><img src="char2/jury/1.jpg" alt="쥬리1스"></div>
+                  <div class="slot"><img src="char2/miho/1.jpg" alt="미호1스"></div>
+                  <div class="slot"><img src="char2/orlri/1.jpg" alt="오를리1스"></div>
+                </div>
+
+                <div class="row">
+                  <div class="slot"><img src="char1/biskuit/1.jpg" alt="비스킷1스"></div>
+                  <div class="slot"><img src="char1/daisy/2.jpg" alt="데이지2스"></div>
+                  <div class="slot"><img src="char2/miho/2.jpg" alt="미호2스"></div>
+                  <div class="slot"><img src="char2/miho/1.jpg" alt="미호1스"></div>
+                  <div class="slot"><img src="char2/jury/2.jpg" alt="쥬리2스"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                </div>
+              </div>
+
+
+
+
+              <div class="w-full lg:w-1/3 flex flex-col">
+                <div class="flex-1 bg-gray-900/50 border border-gray-600 rounded-lg p-4 text-white">
+                  <h4 class="text-orange-400 font-bold mb-3 border-b border-gray-700 pb-2">참고사항
+                  </h4>
+                  <p class="text-sm leading-relaxed text-gray-300">
+                    밀리아 없을시 오공/키리엘 연희 리나 바네사 <br>
+                    미호1스는 연희1스에 맞춰서<br>
+
+
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="bin"></div>
+      <div class="max-w-5xl mx-auto space-y-4">
+        <div class="strategy-card bg-[#2d2d2d] rounded-lg overflow-hidden border border-gray-700 shadow-lg">
+
+          <div class="flex items-center justify-between p-4 gap-4">
+            <div class="w-32 flex-shrink-0">
+              <span class="text-orange-400 font-bold text-lg">루리16턴</span>
+            </div>
+
+            <div class="flex flex-1 items-center justify-center gap-2 overflow-x-auto">
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/ruri/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div class="divider"></div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/kloe/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/yeon/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/banesa/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/rina/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+            </div>
+            <div class="bin"></div>
+            <div class="bin"></div>
+            <div class="flex flex-1 items-center justify-center gap-2 overflow-x-auto">
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/biskuit/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/orlri/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char1/daisy/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div class="divider"></div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/miho/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+              <div
+                class="w-12 h-12 rounded border border-gray-500 bg-gray-800 flex-shrink-0 flex items-center justify-center text-[10px] text-white">
+                <img src="char2/jury/0.jpg" alt="영웅2" class="w-full h-full object-cover">
+              </div>
+
+            </div>
+
+            <div class="w-32 flex justify-end">
+              <button onclick="toggleDetails(this)"
+                class="bg-[#4a4a4a] hover:bg-gray-600 text-white text-sm py-2 px-4 rounded border border-gray-500 transition">
+                더보기
+              </button>
+            </div>
+          </div>
+
+          <div class="details hidden border-t border-gray-700 bg-[#1e3a52] p-6 transition-all">
+            <div class="flex flex-col lg:flex-row gap-8">
+
+              <div class="main-container">
+
+
+
+
+                <div class="row">
+                  <div class="slot"><img src="char2/rina/2.jpg" alt="리나2스"></div>
+                  <div class="slot"><img src="char2/kloe/2.jpg" alt="클로에2스"></div>
+                  <div class="slot"><img src="char1/banesa/1.jpg" alt="바네사1스"></div>
+                  <div class="slot"><img src="char2/ruri/2.jpg" alt="루리2스"></div>
+                  <div class="slot"><img src="char2/ruri/1.jpg" alt="루리1스"></div>
+                  <p style="color: white;">+</p>
+                  <div class="slot"><img src="char1/yeon/1.jpg" alt="연희1스"></div>
+
+                </div>
+
+                <div class="row">
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                </div>
+
+                <div class="row">
+                  <div class="slot"><img src="char1/biskuit/1.jpg" alt="비스킷1스"></div>
+                  <div class="slot"><img src="char2/miho/1.jpg" alt="미호1스"></div>
+                  <div class="slot"><img src="char2/orlri/1.jpg" alt="오를리1스"></div>
+                  <div class="slot"><img src="char1/daisy/2.jpg" alt="데이지2스"></div>
+                  <div class="slot"><img src="char2/miho/2.jpg" alt="미호2스"></div>
+                  <div class="slot"><img src="char2/jury/2.jpg" alt="쥬리2스"></div>
+                  <div class="slot"><img src="char2/jury/1.jpg" alt="쥬리1스"></div>
+                  <div class="slot"><img src="char2/miho/1.jpg" alt="미호1스"></div>
+                  <div class="slot"><img src="char2/orlri/1.jpg" alt="오를리1스"></div>
+                </div>
+
+                <div class="row">
+                  <div class="slot"><img src="char1/biskuit/1.jpg" alt="비스킷1스"></div>
+                  <div class="slot"><img src="char1/daisy/2.jpg" alt="데이지2스"></div>
+                  <div class="slot"><img src="char2/miho/2.jpg" alt="미호2스"></div>
+                  <div class="slot"><img src="char2/miho/1.jpg" alt="미호1스"></div>
+                  <div class="slot"><img src="char2/jury/2.jpg" alt="쥬리2스"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                  <div class="slot"></div>
+                </div>
+              </div>
+
+
+
+
+              <div class="w-full lg:w-1/3 flex flex-col">
+                <div class="flex-1 bg-gray-900/50 border border-gray-600 rounded-lg p-4 text-white">
+                  <h4 class="text-orange-400 font-bold mb-3 border-b border-gray-700 pb-2">참고사항
+                  </h4>
+                  <p class="text-sm leading-relaxed text-gray-300">
+                    클로에 조율자 <br>
+                    미호1스는 연희 1스에 맞춰서 <br>
+
+
+                  </p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="bin"></div>
+
+
+    </main>
+
+  </div>
+
+  <script>
+    // 다크모드 토글 기능
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const moonIcon = document.getElementById('moonIcon');
+    const sunIcon = document.getElementById('sunIcon');
+    const html = document.documentElement;
+
+
+
+    // 페이지 로드 시 저장된 테마 적용
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    if (currentTheme === 'dark') {
+      html.setAttribute('data-theme', 'dark');
+      moonIcon.classList.add('hidden');
+      sunIcon.classList.remove('hidden');
+    }
+
+    function toggleDetails(button) {
+      const card = button.closest('.strategy-card');
+      const details = card.querySelector('.details');
+
+      // 이미 애니메이션 중이면 중단
+      if (details.isAnimating) return;
+      details.isAnimating = true;
+
+      if (window.getComputedStyle(details).display === 'none') {
+        // [열기 로직]
+        details.style.display = 'block';
+        const targetHeight = details.scrollHeight; // 실제 높이 측정
+
+        button.innerText = "닫기";
+
+        // WAAPI 사용: 브라우저 최적화 엔진 활용
+        const anim = details.animate([
+          { height: 0, opacity: 0 },
+          { height: targetHeight + 'px', opacity: 1 }
+        ], {
+          duration: 350,
+          easing: 'cubic-bezier(0.4, 0, 0.2, 1)' // 부드러운 가속도
+        });
+
+        anim.onfinish = () => {
+          details.style.height = 'auto';
+          details.style.opacity = '1';
+          details.isAnimating = false;
+        };
+      } else {
+        // [닫기 로직]
+        const currentHeight = details.offsetHeight;
+        button.innerText = "더보기";
+
+        const anim = details.animate([
+          { height: currentHeight + 'px', opacity: 1 },
+          { height: 0, opacity: 0 }
+        ], {
+          duration: 300,
+          easing: 'ease-in'
+        });
+
+        anim.onfinish = () => {
+          details.style.display = 'none';
+          details.isAnimating = false;
+        };
+      }
+    }
+
+    // 다크모드 토글 이벤트
+    darkModeToggle.addEventListener('click', () => {
+      const currentTheme = html.getAttribute('data-theme');
+
+      if (currentTheme === 'dark') {
+        // 라이트 모드로 전환
+        html.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+        moonIcon.classList.remove('hidden');
+        sunIcon.classList.add('hidden');
+      } else {
+        // 다크 모드로 전환
+        html.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        moonIcon.classList.add('hidden');
+        sunIcon.classList.remove('hidden');
+      }
+    });
+  </script>
+</body>
+
+</html>
